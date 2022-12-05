@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.mainImage {
+    border-radius : 20px;
+    filter:drop-shadow(0 0 10px rgb(255, 0, 1));
+    margin: 20px 0 20px 0;
+   
+}
