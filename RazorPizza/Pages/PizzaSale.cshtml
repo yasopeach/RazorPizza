@@ -7,11 +7,9 @@
 
 <h1 class="text-danger">Pizza Sale</h1>
 
-<a asp-page="/Checkout/Checkout">Checkout</a>
-
 <div class="container">
     <div class="row text-center">
-        <div class="col-3"></div>
+        <div class="col-3 bg-danger"></div>
         <div class="col-3 bg-danger">
             <img class="w-100" src="~/images/Pizzas/Create.png" alt="Create Your Own Pizza!"/>
         </div>
@@ -20,6 +18,23 @@
             <br />
             <a class="btn btn-light text-danger fw-bold mx-auto w-50" asp-page="/Forms/CustomPizza">Try!</a>
         </div>
-        <div class="col-3"></div>
+        <div class="col-3 bg-danger"></div>
     </div>
+    
+
+        <div class="row card-body m-2 bg-danger">
+
+            @foreach (var pizza in Model.FakePizzaDb)
+            {
+                var imgPath = "~/images/Pizzas/" + pizza.ImageTitle + ".png";
+
+
+            <div class="col-4 mt-3">
+                <img class="w-75" src="@imgPath" asp-append-version=true />
+                <a class="btn btn-light text-danger fw-bold mx-auto mt-2 m-lg-1" asp-page="/Checkout/Checkout" asp-route-Name="@pizza.Name" asp-route-ImageTitle="@pizza.ImageTitle" asp-route-PizzaPrice="@pizza.FinalPrice">Get This Pizza</a>
+            </div>
+            }
+
+        </div>
+
 </div>
