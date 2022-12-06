@@ -23,6 +23,11 @@ namespace RazorPizza.Pages.Forms
             PizzaPrice += Pizza.Sauce ? 5 : 0;  // if pizza sauce seçilmiþ ise 5, seçilmemiþ ise pizzaprice'a 0 ekle
             PizzaPrice += Pizza.Cheese ? 5 : 0;
             PizzaPrice += Pizza.Pepperoni ? 5 : 0;
+            PizzaPrice += Pizza.Mushroom ? 5 : 0;
+            PizzaPrice += Pizza.Tuna ? 5 : 0;
+            PizzaPrice += Pizza.Pineapple ? 5 : 0;
+            PizzaPrice += Pizza.Ham ? 5 : 0;
+            PizzaPrice += Pizza.Beef ? 5 : 0;
 
             return RedirectToPage("/Checkout/Checkout", new {Pizza.Name, PizzaPrice } );
 
