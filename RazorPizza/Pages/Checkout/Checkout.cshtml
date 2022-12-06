@@ -1,6 +1,18 @@
 ﻿@page
 @model RazorPizza.Pages.Checkout.CheckoutModel
 @{
+
+    //image path hesapla
 }
-Checkout
-<a asp-page="Thankyou">Thank You</a>
+
+<h1 class="text-danger">Your Order</h1>
+
+<div class="align-content-center">
+    <div class="col-3 mx-auto"> 
+        <img class="w-100 mb-2" src="~/images/Pizzas/Bolognese.png" alt=""
+        asp-append-version=true/>
+        <p>Your Order for PizzaAD total price : PizzaFiyat</p>
+        <a class="btn btn-danger" asp-page="Thankyou">Confirm Order</a>
+
+    </div>
+</div>
