@@ -3,15 +3,18 @@
 @{
 
     //image path hesapla
+
+    var imgPath = "~/images/Pizzas/" + Model.ImageTitle + ".png";
 }
 
 <h1 class="text-danger">Your Order</h1>
 
 <div class="align-content-center">
     <div class="col-3 mx-auto"> 
-        <img class="w-100 mb-2" src="~/images/Pizzas/Bolognese.png" alt=""
+        <img class="w-100 mb-2 border border-danger border-5" src="@imgPath" alt=""
         asp-append-version=true/>
-        <p>Your Order for PizzaAD total price : PizzaFiyat</p>
+        <p>Your Order for <span class="text-white mx-1 bg-danger px-4"> @Model.Name </span></p>
+        <p>Total price : <span class="text-white mx-1 bg-danger px-4"> @Model.PizzaPrice </span></p>
         <a class="btn btn-danger" asp-page="Thankyou">Confirm Order</a>
 
     </div>
