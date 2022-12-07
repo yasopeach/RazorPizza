@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPizza.Data;
+using RazorPizza.Model;
 
 namespace RazorPizza.Pages.Checkout
 {
@@ -9,6 +11,7 @@ namespace RazorPizza.Pages.Checkout
         public string Name { get; set; }
         public float PizzaPrice { get; set; }
         public string ImageTitle { get; set; }
+
 
         public void OnGet()
         {
@@ -21,6 +24,9 @@ namespace RazorPizza.Pages.Checkout
             {
                 ImageTitle = "Create";
             }
+
+            //
+
 
         }
     }

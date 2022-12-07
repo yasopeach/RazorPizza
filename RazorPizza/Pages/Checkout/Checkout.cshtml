@@ -15,7 +15,10 @@
         asp-append-version=true/>
         <p>Your Order for <span class="text-white mx-1 bg-danger px-4"> @Model.Name </span></p>
         <p>Total price : <span class="text-white mx-1 bg-danger px-4"> @Model.PizzaPrice </span></p>
-        <a class="btn btn-danger" asp-page="Thankyou">Confirm Order</a>
+        <a class="btn btn-danger" asp-page="Thankyou"
+        asp-route-Name=@Model.Name
+        asp-route-PizzaPrice=@Model.PizzaPrice
+        >Confirm Order</a>
 
     </div>
 </div>
